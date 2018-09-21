@@ -1,0 +1,12 @@
+**/*.VC.db
+**/Debug/**
+**/Release/**
+**/Debug XP/**
+**/Release XP/**
+**/x64/**
+**/HTMLDefines.h
+**/.vs/**
+**/*.chm
+**/Build/**
+**/*.aps
+**/*.user

@@ -1,0 +1,48 @@
+**/.gitattributes text eol=lf
+**/.gitignore     text eol=lf
+**/*.c            text
+**/*.cpp          text
+**/*.inl          text
+**/*.inc          text
+**/*.hpp          text
+**/*.hhc          text
+**/*.hpj          text
+**/*.cnt          text
+**/*.h            text
+**/*.H            text
+**/*.bat          text
+**/*.cmd          text
+**/*.txt          text
+**/SOURCES        text
+**/MAKEFILE       text
+**/*.mof          text
+**/*.def          text
+**/*.dsp          text eol=crlf
+**/*.dsw          text eol=crlf
+**/*.doc          binary
+**/*.pdf          binary
+**/*.jpg          binary
+**/*.ico          binary
+**/*.cur          binary
+**/*.bmp          binary
+**/*.png          binary
+**/*.lib          binary
+**/*.inf          text
+**/*.rc           text
+**/*.rc2          text
+**/*.rcv          text
+**/*.VER          text
+**/*.rc           text
+**/*.sh           eol=lf
+**/*.py           eol=lf
+**/*.tcl          eol=lf
+**/*.RTF          text eol=crlf
+**/*.props        text eol=crlf
+**/*.htm          text eol=crlf
+**/*.html         text eol=crlf
+**/*.targets      text eol=crlf
+**/*.sln          text eol=crlf
+**/*.vcxproj      text eol=crlf
+**/*.vcproj       text eol=crlf
+**/*.filters      text eol=crlf
+**/*.user         text eol=crlf
