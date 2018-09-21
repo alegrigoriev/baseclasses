@@ -2691,8 +2691,10 @@ CBaseOutputPin::Deliver(IMediaSample * pSample)
 #ifdef DXMPERF
     PERFLOG_DELIVER( m_pName ? m_pName : L"CBaseOutputPin", (IPin *) this, (IPin  *) m_pInputPin, pSample, &m_mt );
 #endif // DXMPERF
-
-    return m_pInputPin->Receive(pSample);
+	pSample->AddRef();
+    HRESULT hr = m_pInputPin->Receive(pSample);
+	pSample->Release();
+	return hr;
 }
 
 
