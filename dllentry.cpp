@@ -22,7 +22,6 @@
 #endif // DEBUG
 #include <strsafe.h>
 HINSTANCE g_hInst;
-#ifdef FILTER_DLL
 
 extern CFactoryTemplate g_Templates[];
 extern int g_cTemplates;
@@ -366,4 +365,3 @@ _DllEntryPoint(
 }
 
 
-#endif

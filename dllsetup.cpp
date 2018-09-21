@@ -15,7 +15,6 @@
 
 #define MAX_KEY_LEN  260
 
-#ifdef FILTER_DLL
 
 //---------------------------------------------------------------------------
 // externally defined functions/variable
@@ -692,4 +691,3 @@ AMovieDllUnregisterServer()
 
   return hr;
 }
-#endif
