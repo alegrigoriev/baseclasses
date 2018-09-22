@@ -55,7 +55,7 @@ BOOL CAMMsgEvent::WaitMsg(DWORD dwTimeout)
     // timeout (in MS) to expire.  allow SENT messages
     // to be processed while we wait
     DWORD dwWait;
-    DWORD dwStartTime;
+    DWORD dwStartTime = 0;
 
     // set the waiting period.
     DWORD dwWaitTime = dwTimeout;

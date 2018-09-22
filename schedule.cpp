@@ -117,7 +117,7 @@ HRESULT CAMSchedule::Unadvise(DWORD_PTR dwAdviseCookie)
     CAdvisePacket * p_prev = &head;
     CAdvisePacket * p_n;
     m_Serialize.Lock();
-    while ( p_n = p_prev->Next() ) // The Next() method returns NULL when it hits z
+    while ( (p_n = p_prev->Next()) != NULL ) // The Next() method returns NULL when it hits z
     {
         if ( p_n->m_dwAdviseCookie == dwAdviseCookie )
         {
@@ -126,7 +126,7 @@ HRESULT CAMSchedule::Unadvise(DWORD_PTR dwAdviseCookie)
             hr = S_OK;
 	    // Having found one cookie that matches, there should be no more
             #ifdef DEBUG
-	       while (p_n = p_prev->Next())
+	       while ((p_n = p_prev->Next()) != NULL)
                {
                    ASSERT(p_n->m_dwAdviseCookie != dwAdviseCookie);
                    p_prev = p_n;
