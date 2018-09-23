@@ -12,25 +12,24 @@
 #include <limits.h>
 
 
-#ifdef FILTER_DLL
-
 /* List of class IDs and creator functions for the class factory. This
    provides the link between the OLE entry point in the DLL and an object
    being created. The class factory will call the static CreateInstance
    function when it is asked to create a CLSID_SystemClock object */
 
-CFactoryTemplate g_Templates[1] = {
-    {&CLSID_SystemClock, CSystemClock::CreateInstance}
+CFactoryTemplate g_SystemClockTemplates[1] = {
+    {L"System reference clock", &CLSID_SystemClock, CSystemClock::CreateInstance}
 };
 
-int g_cTemplates = sizeof(g_Templates) / sizeof(g_Templates[0]);
-#endif
+int g_cSystemClockTemplates = sizeof(g_SystemClockTemplates) / sizeof(g_SystemClockTemplates[0]);
 
 /* This goes in the factory template table to create new instances */
 CUnknown * WINAPI CSystemClock::CreateInstance(__inout_opt LPUNKNOWN pUnk, __inout HRESULT *phr)
 {
     return new CSystemClock(NAME("System reference clock"),pUnk, phr);
 }
+#pragma comment(linker, "/ALTERNATENAME:?g_Templates@@3PAVCFactoryTemplate@@A=?g_SystemClockTemplates@@3PAVCFactoryTemplate@@A")
+#pragma comment(linker, "/ALTERNATENAME:?g_cTemplates@@3HA=?g_cSystemClockTemplates@@3HA")
 
 
 CSystemClock::CSystemClock(__in_opt LPCTSTR pName, __inout_opt LPUNKNOWN pUnk, __inout HRESULT *phr) :
