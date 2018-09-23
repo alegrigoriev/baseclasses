@@ -311,16 +311,7 @@
     <ClCompile Include="ctlutil.cpp" />
     <ClCompile Include="ddmm.cpp" />
     <ClCompile Include="dllentry.cpp" />
-    <ClCompile Include="dllsetup.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug XP|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release XP|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug XP|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release XP|x64'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="dllsetup.cpp" />
     <ClCompile Include="mtype.cpp" />
     <ClCompile Include="outputq.cpp" />
     <ClCompile Include="perflog.cpp" />
